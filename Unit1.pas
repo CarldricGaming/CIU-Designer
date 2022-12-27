@@ -7,7 +7,8 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Menus, FMX.Controls.Presentation, FMX.StdCtrls, FMX.TabControl,
   FMX.Layouts, FMX.Edit, FMX.EditBox, FMX.SpinBox, System.IniFiles,
-  FMX.NumberBox, VCL.Controls, Winapi.Windows, FMX.ExtCtrls, FMX.ListBox;
+  FMX.NumberBox, VCL.Controls, Winapi.Windows, FMX.ExtCtrls, FMX.ListBox,
+  System.Rtti, FMX.Grid.Style, FMX.Grid, FMX.ScrollBox;
 
 type
   TForm1 = class(TForm)
@@ -309,6 +310,52 @@ type
     GroupBox111: TGroupBox;
     Edit22: TEdit;
     ClearEditButton22: TClearEditButton;
+    Expander5: TExpander;
+    GroupBox112: TGroupBox;
+    SpinBox5: TSpinBox;
+    GroupBox113: TGroupBox;
+    Edit23: TEdit;
+    ClearEditButton23: TClearEditButton;
+    GroupBox114: TGroupBox;
+    Edit24: TEdit;
+    ClearEditButton24: TClearEditButton;
+    GroupBox115: TGroupBox;
+    Edit25: TEdit;
+    Edit26: TEdit;
+    ClearEditButton25: TClearEditButton;
+    ClearEditButton26: TClearEditButton;
+    GroupBox116: TGroupBox;
+    Edit27: TEdit;
+    ClearEditButton27: TClearEditButton;
+    GroupBox117: TGroupBox;
+    Edit28: TEdit;
+    ClearEditButton28: TClearEditButton;
+    ScrollBox2: TScrollBox;
+    GroupBox118: TGroupBox;
+    Edit29: TEdit;
+    ClearEditButton29: TClearEditButton;
+    GroupBox119: TGroupBox;
+    Edit30: TEdit;
+    ClearEditButton30: TClearEditButton;
+    GroupBox120: TGroupBox;
+    Edit31: TEdit;
+    ClearEditButton31: TClearEditButton;
+    GroupBox121: TGroupBox;
+    Edit32: TEdit;
+    ClearEditButton32: TClearEditButton;
+    GroupBox122: TGroupBox;
+    Edit33: TEdit;
+    ClearEditButton33: TClearEditButton;
+    GroupBox123: TGroupBox;
+    StringGrid1: TStringGrid;
+    StringColumn1: TStringColumn;
+    StringColumn2: TStringColumn;
+    Edit34: TEdit;
+    ClearEditButton34: TClearEditButton;
+    Button2: TButton;
+    GroupBox124: TGroupBox;
+    Edit35: TEdit;
+    ClearEditButton35: TClearEditButton;
     procedure FormCreate(Sender: TObject);
     procedure SpinBox1Change(Sender: TObject);
     procedure SpinBox2Change(Sender: TObject);
@@ -330,6 +377,7 @@ type
     procedure Image14Click(Sender: TObject);
     procedure Image15Click(Sender: TObject);
     procedure Image13Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -558,7 +606,21 @@ begin
   end;
 end;
 
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  x: integer;
+begin
+  StringGrid1.RowCount := StringGrid1.RowCount + 1;
+  x:= StringGrid1.RowCount;
+
+  StringGrid1.Cells[0, x - 1] := IntToStr(x);
+  StringGrid1.Cells[1, x - 1] := Edit34.Text;
+  Edit34.Text := '';
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
+var
+  x : integer;
 begin
   if FileExists(GetAnySource('CIU_Bg.jpg')) then
     Image1.Bitmap.LoadFromFile(GetAnySource('CIU_Bg.jpg'));
@@ -584,7 +646,28 @@ begin
 
     Edit12.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ApplicationName');
     Edit21.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Publisher');
+    Edit27.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'DefaultInstallDir');
+    Edit28.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ApplicationFolder');
     Edit22.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'GameSize');
+    Edit23.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Lang');
+    Edit24.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Editor');
+    Edit29.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'EditorPage');
+    Edit30.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ConversionPage');
+    Edit31.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ProductCode');
+    Edit32.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'SetupVersion');
+    Edit33.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'GameVersion');
+
+    x := 0;
+    repeat
+      x := x + 1;
+      StringGrid1.RowCount := x;
+      StringGrid1.Cells[0, x - 1] := IntToStr(x);
+      StringGrid1.Cells[1, x - 1] := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'SaveGameFolder' + IntToStr(x));
+    until ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'SaveGameFolder' + IntToStr(x)) = '';
+    if StringGrid1.Cells[1, x - 1] = '' then
+      StringGrid1.RowCount := StringGrid1.RowCount - 1;
+
+    Edit35.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'UninstallFolder');
 
     SpinBox1.Text := ReadIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunHeight');
     SpinBox2.Text := ReadIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunWidth');
@@ -604,6 +687,8 @@ begin
 
     if ReadIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'HideDisabledPlay') = '1' then
       CheckBox13.IsChecked := True else CheckBox13.IsChecked := False;
+
+    SpinBox5.Text := ReadIniFile(GetAnySource('Setup.ini'), 'SplashAR', 'FadeInTime');
 
     // Button Autorun Minimize
     begin
@@ -1026,12 +1111,52 @@ begin
 end;
 
 procedure TForm1.MenuItem1Click(Sender: TObject);
+var
+  x : integer;
 begin
   if FileExists(GetAnySource('Setup.ini')) then
   begin
-    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ApplicationName', Edit12.Text);
-    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Publisher', Edit21.Text);
-    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'GameSize', Edit22.Text);
+    if Edit12.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ApplicationName', Edit12.Text);
+    if (Edit25.Text <> '') and (Edit26.Text <> '') then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ApplicationName' + Edit25.Text, Edit26.Text);
+    if Edit21.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Publisher', Edit21.Text);
+    if Edit27.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'DefaultInstallDir', Edit27.Text);
+    if Edit28.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ApplicationFolder', Edit28.Text);
+    if Edit22.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'GameSize', Edit22.Text);
+    if Edit23.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Lang', Edit23.Text);
+    if Edit24.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Editor', Edit24.Text);
+    if Edit29.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'EditorPage', Edit29.Text);
+    if Edit30.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ConversionPage', Edit30.Text);
+    if Edit31.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ProductCode', Edit31.Text);
+    if Edit32.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'SetupVersion', Edit32.Text);
+    if Edit33.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'GameVersion', Edit32.Text);
+
+    x := 0;
+    if StringGrid1.Cells[1, x] <> '' then
+    begin
+      repeat
+        //StringGrid1.Cells[0, x];
+        //StringGrid1.Cells[1, x];
+        WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'SaveGameFolder'
+          +StringGrid1.Cells[0, x], StringGrid1.Cells[1, x]);
+        x := x + 1;
+      until x = StringGrid1.RowCount;
+    end;
+
+    if Edit35.Text <> '' then
+      WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'UninstallFolder', Edit32.Text);
 
     WriteIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunHeight', SpinBox1.Text);
     WriteIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunWidth', SpinBox2.Text);

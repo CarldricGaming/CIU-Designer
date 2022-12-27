@@ -50,7 +50,7 @@ object Form1: TForm1
         Size.Width = 993.000000000000000000
         Size.Height = 561.000000000000000000
         Size.PlatformDefault = False
-        TabIndex = 1
+        TabIndex = 0
         TabOrder = 2
         TabPosition = PlatformDefault
         Sizes = (
@@ -66,7 +66,7 @@ object Form1: TForm1
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 61.000000000000000000
           Size.Height = 26.000000000000000000
           Size.PlatformDefault = False
@@ -85,85 +85,450 @@ object Form1: TForm1
               Align = Top
               ShowCheck = False
               Size.Width = 993.000000000000000000
-              Size.Height = 177.000000000000000000
+              Size.Height = 273.000000000000000000
               Size.PlatformDefault = False
               Text = 'Installer Option'
               TabOrder = 0
-              ContentSize = '152'
-              object GroupBox109: TGroupBox
-                Position.X = 8.000000000000000000
-                Size.Width = 977.000000000000000000
-                Size.Height = 49.000000000000000000
+              ContentSize = '248'
+              object ScrollBox2: TScrollBox
+                Align = Client
+                Size.Width = 993.000000000000000000
+                Size.Height = 248.000000000000000000
                 Size.PlatformDefault = False
-                Text = 'Application Name'
-                TabOrder = 2
-                object Edit12: TEdit
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  TabOrder = 41
-                  Position.X = 16.000000000000000000
-                  Position.Y = 16.000000000000000000
-                  Size.Width = 937.000000000000000000
-                  Size.Height = 22.000000000000000000
-                  Size.PlatformDefault = False
-                  object ClearEditButton12: TClearEditButton
-                    CanFocus = False
-                    Cursor = crArrow
-                    Size.Width = 28.000000000000000000
-                    Size.Height = 18.000000000000000000
-                    Size.PlatformDefault = False
-                    TabOrder = 0
-                  end
-                end
-              end
-              object GroupBox110: TGroupBox
-                Position.X = 8.000000000000000000
-                Position.Y = 48.000000000000000000
-                Size.Width = 977.000000000000000000
-                Size.Height = 49.000000000000000000
-                Size.PlatformDefault = False
-                Text = 'Publisher'
-                TabOrder = 1
-                object Edit21: TEdit
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  TabOrder = 41
-                  Position.X = 16.000000000000000000
-                  Position.Y = 16.000000000000000000
-                  Size.Width = 937.000000000000000000
-                  Size.Height = 22.000000000000000000
-                  Size.PlatformDefault = False
-                  object ClearEditButton21: TClearEditButton
-                    CanFocus = False
-                    Cursor = crArrow
-                    Size.Width = 28.000000000000000000
-                    Size.Height = 18.000000000000000000
-                    Size.PlatformDefault = False
-                    TabOrder = 0
-                  end
-                end
-              end
-              object GroupBox111: TGroupBox
-                Position.X = 8.000000000000000000
-                Position.Y = 96.000000000000000000
-                Size.Width = 977.000000000000000000
-                Size.Height = 49.000000000000000000
-                Size.PlatformDefault = False
-                Text = 'Game Size'
                 TabOrder = 0
-                object Edit22: TEdit
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  TabOrder = 41
-                  Position.X = 16.000000000000000000
-                  Position.Y = 16.000000000000000000
-                  Size.Width = 937.000000000000000000
-                  Size.Height = 22.000000000000000000
+                ShowSizeGrip = True
+                Viewport.Width = 977.000000000000000000
+                Viewport.Height = 248.000000000000000000
+                object GroupBox109: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
-                  object ClearEditButton22: TClearEditButton
-                    CanFocus = False
-                    Cursor = crArrow
-                    Size.Width = 28.000000000000000000
-                    Size.Height = 18.000000000000000000
+                  Text = 'Application Name'
+                  TabOrder = 13
+                  object Edit12: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
                     Size.PlatformDefault = False
-                    TabOrder = 0
+                    object ClearEditButton12: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox110: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 96.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Publisher'
+                  TabOrder = 12
+                  object Edit21: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton21: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox111: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 240.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Game Size'
+                  TabOrder = 9
+                  object Edit22: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton22: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox113: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 288.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Lang'
+                  TabOrder = 8
+                  object Edit23: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton23: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox114: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 336.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Editor'
+                  TabOrder = 7
+                  object Edit24: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton24: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox115: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 48.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Application Name <Lang>'
+                  TabOrder = 14
+                  object Edit25: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    object ClearEditButton25: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                  object Edit26: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 41
+                    Position.X = 120.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 825.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton26: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox116: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 144.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Default Install Dir'
+                  TabOrder = 11
+                  object Edit27: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton27: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox117: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 192.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Application Folder'
+                  TabOrder = 10
+                  object Edit28: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton28: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox118: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 383.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Editor Page'
+                  TabOrder = 6
+                  object Edit29: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton29: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox119: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 431.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Conversion Page'
+                  TabOrder = 5
+                  object Edit30: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 39
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton30: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox120: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 479.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Product Code'
+                  TabOrder = 4
+                  object Edit31: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton31: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox121: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 527.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Setup Version'
+                  TabOrder = 3
+                  object Edit32: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton32: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox122: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 575.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Game Version'
+                  TabOrder = 2
+                  object Edit33: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 39
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton33: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                end
+                object GroupBox123: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 623.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 162.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Save Game Folder'
+                  TabOrder = 0
+                  object StringGrid1: TStringGrid
+                    CanFocus = True
+                    ClipChildren = True
+                    Position.X = 16.000000000000000000
+                    Position.Y = 24.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 100.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 41
+                    RowCount = 0
+                    Viewport.Width = 925.000000000000000000
+                    Viewport.Height = 75.000000000000000000
+                    object StringColumn1: TStringColumn
+                      Header = 'No'
+                      Size.Width = 41.000000000000000000
+                    end
+                    object StringColumn2: TStringColumn
+                      Header = 'Location'
+                      Size.Width = 863.000000000000000000
+                    end
+                  end
+                  object Edit34: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 42
+                    Position.X = 16.000000000000000000
+                    Position.Y = 128.000000000000000000
+                    Size.Width = 841.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton34: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
+                  end
+                  object Button2: TButton
+                    Position.X = 864.000000000000000000
+                    Position.Y = 128.000000000000000000
+                    StyleLookup = 'addtoolbutton'
+                    TabOrder = 43
+                    Text = '+'
+                    OnClick = Button2Click
+                  end
+                end
+                object GroupBox124: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 783.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Uninstall Folder'
+                  TabOrder = 1
+                  object Edit35: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 41
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                    object ClearEditButton35: TClearEditButton
+                      CanFocus = False
+                      Cursor = crArrow
+                      Size.Width = 28.000000000000000000
+                      Size.Height = 18.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                    end
                   end
                 end
               end
@@ -174,7 +539,7 @@ object Form1: TForm1
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 64.000000000000000000
           Size.Height = 26.000000000000000000
           Size.PlatformDefault = False
@@ -197,12 +562,12 @@ object Form1: TForm1
               TabOrder = 0
               ParentShowHint = False
               ShowHint = False
-              Viewport.Width = 225.000000000000000000
+              Viewport.Width = 209.000000000000000000
               Viewport.Height = 535.000000000000000000
               object Expander1: TExpander
                 Align = Top
                 ShowCheck = False
-                Size.Width = 225.000000000000000000
+                Size.Width = 209.000000000000000000
                 Size.Height = 417.000000000000000000
                 Size.PlatformDefault = False
                 Text = 'Form'
@@ -355,7 +720,7 @@ object Form1: TForm1
                 IsExpanded = False
                 Position.Y = 417.000000000000000000
                 ShowCheck = False
-                Size.Width = 225.000000000000000000
+                Size.Width = 209.000000000000000000
                 Size.Height = 25.000000000000000000
                 Size.PlatformDefault = False
                 Text = 'Background'
@@ -399,9 +764,9 @@ object Form1: TForm1
               object Expander3: TExpander
                 Align = Top
                 IsExpanded = False
-                Position.Y = 442.000000000000000000
+                Position.Y = 529.000000000000000000
                 ShowCheck = False
-                Size.Width = 225.000000000000000000
+                Size.Width = 209.000000000000000000
                 Size.Height = 25.000000000000000000
                 Size.PlatformDefault = False
                 Text = 'Button'
@@ -563,6 +928,35 @@ object Form1: TForm1
                       Size.PlatformDefault = False
                       OnClick = Image15Click
                     end
+                  end
+                end
+              end
+              object Expander5: TExpander
+                Align = Top
+                Position.Y = 442.000000000000000000
+                ShowCheck = False
+                Size.Width = 209.000000000000000000
+                Size.Height = 87.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Splash AR'
+                TabOrder = 3
+                ContentSize = '62'
+                object GroupBox112: TGroupBox
+                  Size.Width = 201.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Fade In (ms)'
+                  TabOrder = 0
+                  object SpinBox5: TSpinBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 41
+                    Cursor = crIBeam
+                    Max = 1000000000.000000000000000000
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 169.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
                   end
                 end
               end
