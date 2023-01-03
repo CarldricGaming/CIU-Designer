@@ -356,6 +356,16 @@ type
     GroupBox124: TGroupBox;
     Edit35: TEdit;
     ClearEditButton35: TClearEditButton;
+    GroupBox125: TGroupBox;
+    NumberBox61: TNumberBox;
+    GroupBox126: TGroupBox;
+    NumberBox62: TNumberBox;
+    GroupBox127: TGroupBox;
+    NumberBox63: TNumberBox;
+    GroupBox128: TGroupBox;
+    NumberBox64: TNumberBox;
+    GroupBox129: TGroupBox;
+    NumberBox65: TNumberBox;
     procedure FormCreate(Sender: TObject);
     procedure SpinBox1Change(Sender: TObject);
     procedure SpinBox2Change(Sender: TObject);
@@ -668,6 +678,11 @@ begin
       StringGrid1.RowCount := StringGrid1.RowCount - 1;
 
     Edit35.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'UninstallFolder');
+    NumberBox61.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Uninstallable');
+    NumberBox62.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ShowGameLauncher');
+    NumberBox63.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'AllowWithoutAutorun');
+    NumberBox64.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'AllowWithoutSmallInstaller');
+    NumberBox65.Text := ReadIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'AddDXFilter');
 
     SpinBox1.Text := ReadIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunHeight');
     SpinBox2.Text := ReadIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunWidth');
@@ -1157,6 +1172,11 @@ begin
 
     if Edit35.Text <> '' then
       WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'UninstallFolder', Edit32.Text);
+    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'Uninstallable', NumberBox61.Text);
+    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'ShowGameLauncher', NumberBox62.Text);
+    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'AllowWithoutAutorun', NumberBox63.Text);
+    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'AllowWithoutSmallInstaller', NumberBox64.Text);
+    WriteIniFile(GetAnySource('Setup.ini'), 'InstallOptions', 'AddDXFilter', NumberBox65.Text);
 
     WriteIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunHeight', SpinBox1.Text);
     WriteIniFile(GetAnySource('Setup.ini'), 'AutorunSettings', 'AutorunWidth', SpinBox2.Text);

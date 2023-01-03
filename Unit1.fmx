@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   ActiveControl = TabItem8
   Caption = 'CIU Designer - PREVIEW'
-  ClientHeight = 609
+  ClientHeight = 624
   ClientWidth = 993
   StyleBook = StyleBook1
   FormFactor.Width = 320
@@ -18,18 +18,18 @@ object Form1: TForm1
       end>
     Align = Client
     Size.Width = 993.000000000000000000
-    Size.Height = 609.000000000000000000
+    Size.Height = 624.000000000000000000
     Size.PlatformDefault = False
     WrapMode = Stretch
     object Panel1: TPanel
       Align = Client
       Size.Width = 993.000000000000000000
-      Size.Height = 609.000000000000000000
+      Size.Height = 624.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       object MenuBar2: TMenuBar
         Align = Bottom
-        Position.Y = 585.000000000000000000
+        Position.Y = 600.000000000000000000
         Size.Width = 993.000000000000000000
         Size.Height = 24.000000000000000000
         Size.PlatformDefault = False
@@ -48,20 +48,20 @@ object Form1: TForm1
       object TabControl1: TTabControl
         Align = Client
         Size.Width = 993.000000000000000000
-        Size.Height = 561.000000000000000000
+        Size.Height = 576.000000000000000000
         Size.PlatformDefault = False
         TabIndex = 0
         TabOrder = 2
         TabPosition = PlatformDefault
         Sizes = (
           993s
-          535s
+          550s
           993s
-          535s
+          550s
           993s
-          535s
+          550s
           993s
-          535s)
+          550s)
         object TabItem1: TTabItem
           CustomIcon = <
             item
@@ -85,30 +85,30 @@ object Form1: TForm1
               Align = Top
               ShowCheck = False
               Size.Width = 993.000000000000000000
-              Size.Height = 273.000000000000000000
+              Size.Height = 265.000000000000000000
               Size.PlatformDefault = False
               Text = 'Installer Option'
               TabOrder = 0
-              ContentSize = '248'
+              ContentSize = '240'
               object ScrollBox2: TScrollBox
                 Align = Client
                 Size.Width = 993.000000000000000000
-                Size.Height = 248.000000000000000000
+                Size.Height = 240.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 0
                 ShowSizeGrip = True
                 Viewport.Width = 977.000000000000000000
-                Viewport.Height = 248.000000000000000000
+                Viewport.Height = 240.000000000000000000
                 object GroupBox109: TGroupBox
                   Position.X = 8.000000000000000000
                   Size.Width = 961.000000000000000000
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Application Name'
-                  TabOrder = 13
+                  TabOrder = 18
                   object Edit12: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 40
+                    TabOrder = 41
                     Position.X = 16.000000000000000000
                     Position.Y = 16.000000000000000000
                     Size.Width = 929.000000000000000000
@@ -131,10 +131,10 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Publisher'
-                  TabOrder = 12
+                  TabOrder = 17
                   object Edit21: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 40
+                    TabOrder = 41
                     Position.X = 16.000000000000000000
                     Position.Y = 16.000000000000000000
                     Size.Width = 929.000000000000000000
@@ -157,7 +157,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Game Size'
-                  TabOrder = 9
+                  TabOrder = 14
                   object Edit22: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 40
@@ -183,7 +183,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Lang'
-                  TabOrder = 8
+                  TabOrder = 13
                   object Edit23: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 40
@@ -209,7 +209,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Editor'
-                  TabOrder = 7
+                  TabOrder = 12
                   object Edit24: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 40
@@ -235,10 +235,10 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Application Name <Lang>'
-                  TabOrder = 14
+                  TabOrder = 19
                   object Edit25: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 40
+                    TabOrder = 41
                     Position.X = 16.000000000000000000
                     Position.Y = 16.000000000000000000
                     object ClearEditButton25: TClearEditButton
@@ -252,7 +252,7 @@ object Form1: TForm1
                   end
                   object Edit26: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 41
+                    TabOrder = 42
                     Position.X = 120.000000000000000000
                     Position.Y = 16.000000000000000000
                     Size.Width = 825.000000000000000000
@@ -275,10 +275,10 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Default Install Dir'
-                  TabOrder = 11
+                  TabOrder = 16
                   object Edit27: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 40
+                    TabOrder = 41
                     Position.X = 16.000000000000000000
                     Position.Y = 16.000000000000000000
                     Size.Width = 929.000000000000000000
@@ -301,10 +301,10 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Application Folder'
-                  TabOrder = 10
+                  TabOrder = 15
                   object Edit28: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 40
+                    TabOrder = 41
                     Position.X = 16.000000000000000000
                     Position.Y = 16.000000000000000000
                     Size.Width = 929.000000000000000000
@@ -327,7 +327,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Editor Page'
-                  TabOrder = 6
+                  TabOrder = 11
                   object Edit29: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 40
@@ -353,7 +353,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Conversion Page'
-                  TabOrder = 5
+                  TabOrder = 10
                   object Edit30: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 39
@@ -379,7 +379,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Product Code'
-                  TabOrder = 4
+                  TabOrder = 9
                   object Edit31: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 40
@@ -405,7 +405,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Setup Version'
-                  TabOrder = 3
+                  TabOrder = 8
                   object Edit32: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 40
@@ -431,7 +431,7 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Game Version'
-                  TabOrder = 2
+                  TabOrder = 7
                   object Edit33: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
                     TabOrder = 39
@@ -466,10 +466,10 @@ object Form1: TForm1
                     Size.Width = 929.000000000000000000
                     Size.Height = 100.000000000000000000
                     Size.PlatformDefault = False
-                    TabOrder = 41
+                    TabOrder = 40
                     RowCount = 0
-                    Viewport.Width = 925.000000000000000000
-                    Viewport.Height = 75.000000000000000000
+                    Viewport.Width = 929.000000000000000000
+                    Viewport.Height = 100.000000000000000000
                     object StringColumn1: TStringColumn
                       Header = 'No'
                       Size.Width = 41.000000000000000000
@@ -481,7 +481,7 @@ object Form1: TForm1
                   end
                   object Edit34: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 42
+                    TabOrder = 41
                     Position.X = 16.000000000000000000
                     Position.Y = 128.000000000000000000
                     Size.Width = 841.000000000000000000
@@ -500,7 +500,7 @@ object Form1: TForm1
                     Position.X = 864.000000000000000000
                     Position.Y = 128.000000000000000000
                     StyleLookup = 'addtoolbutton'
-                    TabOrder = 43
+                    TabOrder = 42
                     Text = '+'
                     OnClick = Button2Click
                   end
@@ -512,10 +512,10 @@ object Form1: TForm1
                   Size.Height = 49.000000000000000000
                   Size.PlatformDefault = False
                   Text = 'Uninstall Folder'
-                  TabOrder = 1
+                  TabOrder = 6
                   object Edit35: TEdit
                     Touch.InteractiveGestures = [LongTap, DoubleTap]
-                    TabOrder = 41
+                    TabOrder = 40
                     Position.X = 16.000000000000000000
                     Position.Y = 16.000000000000000000
                     Size.Width = 929.000000000000000000
@@ -529,6 +529,106 @@ object Form1: TForm1
                       Size.PlatformDefault = False
                       TabOrder = 0
                     end
+                  end
+                end
+                object GroupBox125: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 831.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Uninstallable'
+                  TabOrder = 5
+                  object NumberBox61: TNumberBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Cursor = crIBeam
+                    Max = 1.000000000000000000
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object GroupBox126: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 879.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Show Game Launcher'
+                  TabOrder = 4
+                  object NumberBox62: TNumberBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Cursor = crIBeam
+                    Max = 1.000000000000000000
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object GroupBox127: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 927.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Allow Without Autorun'
+                  TabOrder = 3
+                  object NumberBox63: TNumberBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Cursor = crIBeam
+                    Max = 1.000000000000000000
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object GroupBox128: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 975.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Allow Without Small Installer'
+                  TabOrder = 2
+                  object NumberBox64: TNumberBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 39
+                    Cursor = crIBeam
+                    Max = 1.000000000000000000
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object GroupBox129: TGroupBox
+                  Position.X = 8.000000000000000000
+                  Position.Y = 1023.000000000000000000
+                  Size.Width = 961.000000000000000000
+                  Size.Height = 49.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Add DX Filter'
+                  TabOrder = 1
+                  object NumberBox65: TNumberBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    TabOrder = 40
+                    Cursor = crIBeam
+                    Max = 1.000000000000000000
+                    Position.X = 16.000000000000000000
+                    Position.Y = 16.000000000000000000
+                    Size.Width = 929.000000000000000000
+                    Size.Height = 22.000000000000000000
+                    Size.PlatformDefault = False
                   end
                 end
               end
@@ -551,19 +651,19 @@ object Form1: TForm1
           object Panel2: TPanel
             Align = Left
             Size.Width = 225.000000000000000000
-            Size.Height = 535.000000000000000000
+            Size.Height = 550.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object VertScrollBox1: TVertScrollBox
               Align = Client
               Size.Width = 225.000000000000000000
-              Size.Height = 535.000000000000000000
+              Size.Height = 550.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 0
               ParentShowHint = False
               ShowHint = False
               Viewport.Width = 209.000000000000000000
-              Viewport.Height = 535.000000000000000000
+              Viewport.Height = 550.000000000000000000
               object Expander1: TExpander
                 Align = Top
                 ShowCheck = False
@@ -965,12 +1065,12 @@ object Form1: TForm1
           object Panel3: TPanel
             Align = Client
             Size.Width = 768.000000000000000000
-            Size.Height = 535.000000000000000000
+            Size.Height = 550.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
             object Panel4: TPanel
               Align = Bottom
-              Position.Y = 392.000000000000000000
+              Position.Y = 407.000000000000000000
               Size.Width = 768.000000000000000000
               Size.Height = 143.000000000000000000
               Size.PlatformDefault = False
@@ -3147,11 +3247,11 @@ object Form1: TForm1
             object ScrollBox1: TScrollBox
               Align = Client
               Size.Width = 768.000000000000000000
-              Size.Height = 392.000000000000000000
+              Size.Height = 407.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 2
               Viewport.Width = 768.000000000000000000
-              Viewport.Height = 392.000000000000000000
+              Viewport.Height = 407.000000000000000000
               object Image2: TImage
                 MultiResBitmap = <
                   item
